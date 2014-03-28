@@ -10,6 +10,10 @@
 <br>
 
 Установка вручную<br>
+
+Протестируйте на демо-данных<br>
+perl parse_openaccess_log_in_db.pl oa_log_example<br>
+
 <br>
 Что создать текстовый файл-лог для OpenAccess запустите minicom в новом скрине<br>
 <br>
@@ -19,3 +23,4 @@ screen -dmS [name of screen] minicom -C [path to created log file]<br>
 <br>
 screen -dmS OA_MINICOM minicom -C /home/access/scripts/access_log.txt<br>
 <br>
+

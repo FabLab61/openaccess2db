@@ -7,4 +7,6 @@ my $dbh = DBI->connect("DBI:mysql:database=".$config{db}.";host=".$config{dbserv
 my $sth = $dbh->prepare('SELECT * FROM log');
 $sth->execute();
 my $result = $sth->fetchall_hashref("id");
-warn Dumper $result;
+
+print "$_ $result{$_}\n" for (sort keys %$result);
+#warn Dumper $result;

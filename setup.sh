@@ -28,4 +28,4 @@ chmod 777 $CRON_LOG
 
 echo "Absolute path path to cron log is $PWD/$CRON_LOG"
 
-
+chmod +x "select.pl"

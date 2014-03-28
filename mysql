@@ -1,0 +1,3 @@
+#!/usr/bin/perl
+my %config = do 'config.pl';
+system("/usr/bin/mysql -u $config{user} -p$config{password} -h $config{dbserver} $config{db}");
