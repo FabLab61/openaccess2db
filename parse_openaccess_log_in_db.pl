@@ -58,14 +58,18 @@ for my $linenr (0 .. $#file) {             # loop over line numbers
 }
 untie @file;
 
-# Clear openaccess log file for avoid duplicated entries
-# open FILE, '>$openaccess_log_file';
-# truncate(FILE,0);
-# close FILE;
+print "Find ".scalar @arr." new items \n";
+
+########  Clear openaccess log file for avoid duplicated entries
+open (FILE, ">", $openaccess_log_file) or die "Unable to open file, $!";
+print "Clearing $openaccess_log_file...\n";
+#truncate(FILE,0);
+close FILE or warn "Unable to close the file handle: $!";
+
+############################
 
 my $from_file = { map { $_->{'created'} => $_ } @arr };
 warn Dumper $from_file;
-
 
 ###### Insert it in DB #######
 
@@ -81,6 +85,10 @@ for (sort keys %$from_file ) {
 
 $dbh->disconnect();
 
+print mysql_timestamp()." - Find ".scalar @arr." new items, ";
+print scalar $i." items inserted in db \n";
+print "Execution result will stored in $config{log}\n";
+
 ###############################
 
 sub mysql_timestamp() {
@@ -93,12 +101,6 @@ sub mysql_timestamp() {
 
 open (FILE, ">>", $config{log}) or die "Unable to open file, $!";
 print FILE mysql_timestamp()." - Find ".scalar @arr." new items, ";
-print FILE $i." items inserted in db \n";
+print FILE scalar $i." 0 items inserted in db \n";
 close FILE or warn "Unable to close the file handle: $!";
 
-
-###############################
-
-print mysql_timestamp()." - Find ".scalar @arr." new items, ";
-print $i." items inserted in db \n";
-print "Execution result stored in $config{log}\n";

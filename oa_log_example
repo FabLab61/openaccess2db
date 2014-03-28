@@ -1,0 +1,20 @@
+16:17:55  3/1/14 SAT User 7376216 presented tag at reader 2
+16:17:55  3/1/14 SAT User not found
+17:18:6  3/1/14 SAT User 7359339 presented tag at reader 1
+17:18:6  3/1/14 SAT 17:18:6  3/1/14 SAT User 199 authenticated.
+17:18:6  3/1/14 SAT User  granted access at reader 1
+17:18:6  3/1/14 SAT Alarm level changed to 0
+17:18:6  3/1/14 SAT Alarm armed level changed to 0
+Door 1 unlocked
+Door 1 locked
+Invalid command. Press '?' for help.
+Valid commands are:
+(d)ate, (s)show user, (m)odify user <num>  <usermask> <tagnumber>
+(a)ll user dump,(r)emove_user <num>,(o)open door <num>
+(u)nlock all doors,(l)lock all doors
+(1)disarm_alarm, (2)arm_alarm,(3)train_alarm (9)show_status
+(t)ime set <sec 0..59> <min 0..59> <hour 0..23> <day of week 1..7>
+           <day 0..31> <mon 0..12> <year 0.99>
+(e)nable <password> - enable or disable priveleged mode
+(h)ardware Test <iterations> - Run the hardware test
+Invalid command. Press '?' for help.
