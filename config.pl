@@ -1,5 +1,5 @@
 dbserver   => 'localhost',
 db         => 'openaccess',
 user       => 'root',
-password   => 'toor',
+password   => '#####',
 log => 'parse_log.txt';
